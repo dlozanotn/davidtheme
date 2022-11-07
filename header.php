@@ -55,7 +55,13 @@
 					<li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
 					<li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
 				</ul>
-
+		
 			</div>
 		</nav>
-    </header>
+		</header>
+		
+	<div class="main-wrapper">
+	    <header class="page-title theme-bg-light text-center gradient py-5">
+			<h1 class="heading">Blog Home Page Heading</h1>
+    </div>
+		</header>
