@@ -21,16 +21,28 @@
     <header class="header text-center">	    
 	    <a class="site-title pt-lg-4 mb-0" href="index.html">SiteName.dev</a>
         
-	    <nav class="navbar navbar-expand-lg navbar-dark" >
+	<nav class="navbar navbar-expand-lg navbar-dark" >
            
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div id="navigation" class="collapse navbar-collapse flex-column" >
-				<img class="mb-3 mx-auto logo" src="images/logo.png" alt="logo" >			
+			<span class="navbar-toggler-icon"></span></button>
+			
+		<div id="navigation" class="collapse navbar-collapse flex-column">
+			<img class="mb-3 mx-auto logo" src="images/logo.png" alt="logo">
 				
-				<ul class="navbar-nav flex-column text-sm-center text-md-left">
+		
+			<?php  wp_nav_menu( 
+				array(
+					'menu' => 'Primary',
+					'contaioner' => '',
+					'theme_location' => 'primary',
+					'items_wrap' => '<ul id="" class="navbar-nav flex-column text-sm-center text-md-left">%3$s</ul>'
+				)
+
+			);
+			?>
+	
+		
+			<ul class="navbar-nav flex-column text-sm-center text-md-left">
 					<li class="nav-item active">
 					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
 					</li>
@@ -46,7 +58,7 @@
 					<li class="nav-item">
 					    <a class="nav-link btn btn-primary" href="contact.html"><i class="fas fa-envelope fa-fw mr-2"></i>Contact Us</a>
 					</li>
-				</ul>
+			</ul>
 				<hr>
 				<ul class="social-list list-inline py-3 mx-auto">
 					<li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
@@ -56,12 +68,12 @@
 					<li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
 				</ul>
 		
-			</div>
-		</nav>
-		</header>
+		</div>
+	</nav>
+	</header>
 		
 	<div class="main-wrapper">
-	    <header class="page-title theme-bg-light text-center gradient py-5">
-			<h1 class="heading">Blog Home Page Heading</h1>
+	<header class="page-title theme-bg-light text-center gradient py-5">
+			<h1 class="heading"><?php the_title(); ?></h1>
     </div>
-		</header>
+	</header>

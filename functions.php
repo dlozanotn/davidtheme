@@ -10,6 +10,20 @@ add_action( 'after_setup_theme', 'david_theme_support' );
 
  
 
+function david_menus() {
+
+    $locations = array (
+        'primary' => "Desktop Primary Left Sidebar",
+        'footer' => "Footer Menu Items"
+
+    );                                           
+
+    register_nav_menus( $locations );
+}
+
+add_action('init', 'david_menus' );
+
+
 function david_register_styles () {
 
     wp_enqueue_style('david-styles', get_template_directory_uri() . "/style.css", array('david-bootstrap'), '1.0', 'all');
