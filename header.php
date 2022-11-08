@@ -28,8 +28,7 @@
 			
 		<div id="navigation" class="collapse navbar-collapse flex-column">
 			<img class="mb-3 mx-auto logo" src="images/logo.png" alt="logo">
-				
-		
+
 			<?php  wp_nav_menu( 
 				array(
 					'menu' => 'Primary',
