@@ -48,5 +48,29 @@ function david_register_scripts () {
 add_action('wp_enqueue_scripts', 'david_register_scripts' );
 
 
+function david_widget_area(){
+
+    register_sidebar( 
+        array(
+            'before-title' => '', 
+            'after-title' => '',
+            'before-widget' => '',
+            'after-widget' => '',
+        ),
+
+        array(
+            'name' => 'Sidebar Area',
+            'id' => 'sidebar-1',
+            'description' => 'Sidebar Widget Area'
+
+        )
+
+        );   
+
+
+}
+
+add_action( 'widgets_init', 'david_widget_area' );
+
 ?>
 
